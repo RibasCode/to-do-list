@@ -1,14 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
 
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
 
+
+main{
+
+    margin: 0px 300px;
+    height: auto;
+    /* background-color: rgb(29, 125, 209); */
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
 
 #add-btn{
     height: 75px;
@@ -62,7 +81,27 @@
 }
 
 
+/*--------------------------------------------------------------
+# Template
+--------------------------------------------------------------*/
 
+
+.to-do{
+    user-select: none;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    margin: 30px;
+    border: 2px solid rgba(200, 200, 200, 0.3);
+    box-shadow: 0px 0px 0px rgba(200, 200, 200, 0),
+    0px 0px 35px rgba(0, 0, 0, .05);
+}
+.to-do-h2{
+    color: #000;
+    margin: 10px 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
 
 
 /*--------------------------------------------------------------
@@ -74,9 +113,11 @@
 
 
     /*--------------------------------------------------------------
-    # header - Portatil
+    # Main
     --------------------------------------------------------------*/
-
+    main{
+        margin: 0px 100px;    
+    }
 
 }
 
