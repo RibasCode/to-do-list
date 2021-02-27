@@ -29,7 +29,7 @@
 
         <main>
             <div id="cards"></div>
-            <button id="add-btn"><img src="assets/img/+.svg" alt=""><p id="cantidad-cesta"></p></button>
+            <button id="add-btn"><img src="assets/img/+.svg" alt=""></button>
 
         </main>
 
@@ -39,8 +39,20 @@
 
         <template id="template-to-do-list">
             <div class="to-do">
-            <h2 class="to-do-h2">New List</h2>
-        </div>
+
+                <h2 class="to-do-h2" contenteditable="true">New List</h2>
+                <p class="to-do-p" contenteditable="true" data-placeholder="add note..."></p>
+            </div>
+            <div></div>
+        </template>
+
+
+        <template id="template-post-it">
+            <div class="post-it">
+
+                <h2 class="post-it-h2">New List</h2>
+                <p class="post-it-p" contenteditable="true">add note...</p>
+            </div>
             <div></div>
         </template>
 

@@ -13,20 +13,29 @@ body{
 # Main
 --------------------------------------------------------------*/
 
+h1{
+    width: 100%;
+    margin: 30px 0px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: solid 2px rgba(200, 200, 200, 0.3);
+}
 
 main{
+    display: flex;
+    justify-content: center;
 
-    margin: 0px 300px;
     height: auto;
     /* background-color: rgb(29, 125, 209); */
 }
 
 #cards{
     display: flex;
-    justify-content: center;
+
+    padding: auto ;
     display: flex;
     flex-wrap: wrap;
-
+    width: 1080px;
 }
 
 #add-btn{
@@ -43,7 +52,7 @@ main{
     box-shadow: 0px 0px 30px rgba(200, 200, 200, 1),
     0px 0px 35px rgba(0, 0, 0, .1);
 
-    border: none;
+    border: 2px solid rgba(200, 200, 200, 0.0);
     border-radius: 50%;
 
     outline:none;
@@ -58,7 +67,7 @@ main{
 
 #add-btn:hover{
     bottom: 45px;
-
+    border: 2px solid rgba(200, 200, 200, 0.3);
     box-shadow: 0px 0px 0px rgba(200, 200, 200, 0),
     0px 0px 35px rgba(0, 0, 0, .1);
 
@@ -89,20 +98,71 @@ main{
 .to-do{
     user-select: none;
     border-radius: 5px;
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    border: 2px solid rgba(200, 200, 200, 0.3);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, .05);
+    transition: 0.2s ease-in;
+}
+
+.to-do:hover{
+    border: 2px solid rgba(200, 200, 200, 0.6);
+}
+
+.to-do-h2{
+    color: #000;
+    padding: 10px 15px 10px 10px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.to-do-p{
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+}
+
+p:empty:not(:focus)::before {
+    content: attr(data-placeholder);
+    opacity: 1;
+    transition: 0.2s ease-in;
+}
+
+p:attr(data-placeholder):focus {
+
+    opacity: 0;
+}
+
+
+.post-it{
+    user-select: none;
+    border-radius: 5px;
     height: 300px;
     width: 300px;
     margin: 30px;
     border: 2px solid rgba(200, 200, 200, 0.3);
-    box-shadow: 0px 0px 0px rgba(200, 200, 200, 0),
-    0px 0px 35px rgba(0, 0, 0, .05);
-}
-.to-do-h2{
-    color: #000;
-    margin: 10px 15px;
-    font-size: 22px;
-    font-weight: 600;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, .05);
 }
 
+.post-it-h2{
+    color: #000;
+    padding: 10px 15px 10px 10px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.post-it-p{
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+}
 
 /*--------------------------------------------------------------
 @Media Quiery - Portatil
@@ -115,9 +175,6 @@ main{
     /*--------------------------------------------------------------
     # Main
     --------------------------------------------------------------*/
-    main{
-        margin: 0px 100px;    
-    }
 
 }
 
@@ -134,7 +191,9 @@ main{
     # header - PC Small Screen
     --------------------------------------------------------------*/
 
-
+    #cards{
+        justify-content: center;
+    }
 }
 
 
